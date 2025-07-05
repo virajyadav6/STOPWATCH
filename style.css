@@ -1,0 +1,149 @@
+body {
+  background: linear-gradient(to right, #000000, #434343);
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: azure;
+  margin-top: 5rem;
+  margin-bottom: -3rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.stopwatch {
+  max-width: 90%;
+  width: 600px;
+  background: linear-gradient(to right, #000000, #434343);
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+  margin: 6rem auto 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.stopwatch h1 {
+  margin: 2rem 0 1rem;
+  font-size: 3rem;
+  font-weight: lighter;
+  word-break: break-word;
+}
+
+#laps-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 90%;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lap-bubble {
+  background: linear-gradient(to right, #bc4e9c, #f80759);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  cursor: default;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.buttons i {
+  font-size: 2.5rem;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.buttons i:hover {
+  transform: scale(1.2);
+  color: #f80759;
+}
+
+.play-btn {
+  background: linear-gradient(to right, #000000, #434343);
+  color: #f80759;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.play-btn:hover {
+  background: linear-gradient(to right, #434343, #666666);
+  color: #f80759;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  #app-title {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+  }
+
+  .stopwatch h1 {
+    font-size: 2.25rem;
+  }
+
+  .buttons i {
+    font-size: 2rem;
+    padding: 0.75rem;
+  }
+
+  .lap-bubble {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stopwatch {
+    padding: 2rem 1rem;
+  }
+
+  .stopwatch h1 {
+    font-size: 1.75rem;
+  }
+
+  .buttons {
+    flex-direction: row; /* Ensure horizontal layout */
+    flex-wrap: wrap;     /* Allow wrapping if needed */
+    gap: 0.75rem;
+    justify-content: center; /* Center the buttons horizontally */
+  }
+
+  .buttons i {
+    font-size: 1.75rem;
+    padding: 0.6rem;
+  }
+
+  .lap-bubble {
+    font-size: 0.9rem;
+  }
+}
+
